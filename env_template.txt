@@ -1,0 +1,15 @@
+OPENAI_API_KEY=your-openai-api-key
+
+
+**chatbot.py**
+
+Steps of below Code:
+1. User Query
+2. Display user Query
+3. Save Query to chat history
+4. Send the chat history to llm
+5. get response from llm
+6. save response in chat history
+7. Display llm response
+
+[{"role": "system", "content": "You are a helpful assistant"}, {"role": "user", "content": "What is ML?"}]
