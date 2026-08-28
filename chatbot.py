@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import streamlit as st
-from langchain_openai import ChatOpenAI
+#from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 #load the env variables
 load_dotenv()
@@ -25,7 +26,8 @@ for message in st.session_state.chat_history:
         st.markdown(message["content"])
 
 #llm initiate
-llm = ChatOpenAI(model="claude-haiku-4-5-20251001", temperature=0)
+#llm = ChatOpenAI(model="claude-haiku-4-5-20251001", temperature=0)
+llm = ChatGoogleGenerativeAI(model="gemini-3.1-flash-lite", temperature=0)
 
 user_prompt = st.chat_input('Ask Chatbot...')
 
